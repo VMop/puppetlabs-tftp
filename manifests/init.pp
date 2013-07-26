@@ -76,7 +76,7 @@ class tftp (
     $svc_enable = true
   }
 
-  $start = $provider ? {
+  $start = $::provider ? {
     'base'  => "${binary} -l -a ${address}:${port} -u ${username} ${options} ${directory}",
     default => undef
   }
